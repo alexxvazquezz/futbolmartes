@@ -7,9 +7,14 @@
   </head>
   <body>
     <div class="header">
-      <h1 class="logo"><a href="/"</a>Falta Uno</h1>
-
+      <h1 class="logo"><a href="/index.php"</a>Falta Uno</h1>
     </div>
 
+    <form class="register-form" action="inc/data.php" method="post">
+      <input type="text" name="email" value="Email"><br>
+      <input type="text" name="phonenumber" value="PhoneNumber"><br>
+      <input type="text" name="password" value="Password"><br>
+      <input type="button" name="submit" value="Submit"><br>
+    </form>
   </body>
 </html>
