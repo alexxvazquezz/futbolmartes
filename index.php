@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Falta-Uno</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-  </head>
-  <body>
-    <div class="header">
-      <h1 class="logo"><a href="/index.php"</a>Falta Uno</h1>
-    </div>
+<?php
+include('inc/header.php');
+
+if($_SERVER ["REQUEST_METHOD"] == POST) {
+  $name = trim(filter_input(INPUT_POST, "name" , FILTER_SANITIZE_STRING));
+  $phonenumber = trim(filter_input(INPUT_POST,"phonenumber",FILTER_SANITIZE_SPECIAL_CHARS));
+  $password = filter_input(INPUT_POST."password",FILTER_SANITIZE_STRING);
+  }
+
+if($name == "" || $phonenumber == "" || $password == ""){
+  echo "<h1>Please don't forget to enter a name, number or password</h1>";
+}
+
+
+?>
+
 
     <form class="register-form" action="inc/data.php" method="post">
       <input type="text" name="email" value="Email"><br>
